@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.DashBoardFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="DashBoardContext" prefHeight="690.0" prefWidth="1350.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="690.0" fitWidth="1052.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/02.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="1136.0" layoutY="43.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="49.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="94.0" fitWidth="91.0" layoutX="1161.0" layoutY="131.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="237.0" layoutY="307.0" text="Student Management System" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="473.0" layoutY="245.0" text="IJSE" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="63.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="407.0" text="GDSE-2022" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="1068.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/z5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="31.0" layoutX="1068.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/z4.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1075.0" layoutY="263.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1075.0" layoutY="397.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="1108.0" layoutY="289.0" promptText="Username" />
+      <PasswordField fx:id="txtPassword" layoutX="1108.0" layoutY="425.0" prefHeight="38.0" prefWidth="218.0" promptText="Password" />
+      <Button layoutX="1126.0" layoutY="533.0" mnemonicParsing="false" onAction="#AdminFormOnAction" prefHeight="42.0" prefWidth="154.0" style="-fx-background-color: #16a085; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
