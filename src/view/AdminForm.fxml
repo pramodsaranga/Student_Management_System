@@ -54,5 +54,11 @@
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
       </Button>
+      <Button layoutX="55.0" layoutY="608.0" mnemonicParsing="false" onAction="#backToHomeOnAction" prefHeight="43.0" prefWidth="180.0" style="-fx-background-color: #c0392b; -fx-background-radius: 50;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="StudentContext" layoutX="310.0" layoutY="1.0" prefHeight="690.0" prefWidth="1040.0" />
    </children>
 </AnchorPane>
