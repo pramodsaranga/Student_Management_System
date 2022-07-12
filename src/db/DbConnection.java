@@ -17,6 +17,13 @@ public class DbConnection {
         return dbConnection == null ? dbConnection = new DbConnection() : dbConnection;
     }
 
+    public static DbConnection getInstance() throws SQLException, ClassNotFoundException {
+        if (dbConnection==null){
+            dbConnection= new DbConnection();
+        }
+        return dbConnection;
+    }
+
     public Connection getConnection() {
         return connection;
     }
