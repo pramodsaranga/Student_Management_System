@@ -6,7 +6,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import model.Student;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,18 +37,19 @@ public class StudentManageFormController {
     public void studentSearchOnAction(ActionEvent actionEvent) {
     }
 
-    public boolean studentAddOnAction(Student s ) throws SQLException, ClassNotFoundException {
-        Connection con= DbConnection.getInstance().getConnection();
-        String query="INSERT INTO Student VALUES(?,?,?,?,?,?)";
+    public boolean studentAddOnAction(Student s) throws SQLException, ClassNotFoundException {
+        Connection con = DbConnection.getInstance().getConnection();
+        String query = "INSERT INTO Student VALUES(?,?,?,?,?,?)";
         PreparedStatement stm = con.prepareStatement(query);
-        stm.setObject(1,s.getStudentID());
-        stm.setObject(2,s.getStudentName());
-        stm.setObject(3,s.getEmail());
-        stm.setObject(4,s.getContact());
-        stm.setObject(5,s.getAddress());
-        stm.setObject(6,s.getNIC());
-        return stm.executeUpdate()>0;
+        stm.setObject(1, s.getStudentID());
+        stm.setObject(2, s.getStudentName());
+        stm.setObject(3, s.getEmail());
+        stm.setObject(4, s.getContact());
+        stm.setObject(5, s.getAddress());
+        stm.setObject(6, s.getNIC());
+        return stm.executeUpdate() > 0;
     }
+
     public Student getStudent(String id) throws SQLException, ClassNotFoundException {
         PreparedStatement stm = DbConnection.getInstance()
                 .getConnection().prepareStatement("SELECT * FROM Student WHERE id=?");

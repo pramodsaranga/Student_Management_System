@@ -13,12 +13,12 @@ public class Student {
     }
 
     public Student(String studentID, String studentName, String email, String contact, String address, String NIC) {
-        StudentID = studentID;
-        StudentName = studentName;
-        Email = email;
-        Contact = contact;
-        Address = address;
-        this.NIC = NIC;
+        this.setStudentID(studentID);
+        this.setStudentName(studentName);
+        this.setEmail(email);
+        this.setContact(contact);
+        this.setAddress(address);
+        this.setNIC(NIC);
     }
 
     public String getStudentID() {
